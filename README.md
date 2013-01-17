@@ -5,6 +5,9 @@
 A utility to display beautiful time bar-charts in the browser.
 
 ## Usage
+
+See [example file](http://htmlpreview.github.com/?http://github.com/davidrapin/SmoothieBar/blob/master/example/index.html).
+
 	<html>
 	<head>
 		<title>SmoothieBar Test</title>
