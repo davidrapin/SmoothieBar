@@ -44,16 +44,17 @@ A utility to display beautiful time bar-charts in the browser.
   * **totalHeight** (default: `200`) the total height of the chart (in pixels).
   * **totalWidth** (default: `1.0`) the width of the chart as a ration of the actual width of the containing element (between `0.0` and `1.0`).
   * **colorRange** (default: `["#051", "#0f3"]`) the rage of colors used as bar colors for different datasets.
-  * **axisColor** (default: `"#0f3"`) the colors of axis and axis text.
+  * **axisColor** (default: `"#051"`) the colors of axis and axis text.
   * **axisFontSize** (default: `12`) the font size used for axis and legend texts.
   * **legendLineHeight** (default: `11`) the line height used in legends.
   * **yAxisFormat** (default: `SmoothieBar.getFormat("")`) the Y axis format function (receives a number and returns a string)
   * **timeFormat** (default: function) the time formating function (receives a date object and returns a string)
   * **yAxisRight** (default: `false`) whether the Y axis should be on the right (`true`) or on the left (`false`).
+  * **padding** (default: `{top: 15, right: 10, bottom: 17, left: 35}`) padding around the chart for the axis and legend (in pexiels).
   * **barColumnRatio** (default: `0.8`) the width of a bar as a ratio of the total column width, to add spacing between bars (between `0.0` anbd `1.0`).
   * **stackScaleMax** (default: `-1`) the maximum value of the Y axis (a positive number to set the value, or a negative number for automatic).
   * **frameDuration** (default: `1000`) the duration between new values, in milliseconds (the data callback is called every `frameDuration` milliseconds).
-  * **transitionDuration** (default: `1000`) the duration of the frame animation. Cannot be longer than `frameDuration`.
+  * **transitionDuration** (default: `400`) the duration of the frame animation, in milliseconds. Cannot be longer than `frameDuration`.
   * **transitionEase** (default: `"linear"`) the type of frame transition animation. Can be [any type defined by d3.js](https://github.com/mbostock/d3/wiki/Transitions#wiki-d3_ease) (`"linear"` or `"bounce"` look best).
 
 **start()**:

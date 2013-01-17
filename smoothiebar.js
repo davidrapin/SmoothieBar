@@ -9,7 +9,7 @@
 
 ;SmoothieBar = (function() {
 
-var debug_id = "box6";
+//var debug_id = null;
 
 SmoothieBar.getFormat = function(suffix) {
 	var f = d3.format(".3s");
@@ -26,7 +26,7 @@ SmoothieBar.getFormat = function(suffix) {
 SmoothieBar.clone = function(obj) {
 	var clone = {};
 	for (var key in obj) {
-		if(typeof(obj[key])=="object") {
+		if(typeof(obj[key]) == "object") {
 			clone[key] = SmoothieBar.clone(obj[key]);
 		} else {
 			clone[key] = obj[key];
@@ -51,13 +51,13 @@ SmoothieBar.merge = function(org, o) {
 
 var DefaultParams = {
 	// 10 bars are displayed
-	wantedItems: 10,
+	wantedItems: 20,
 
 	// the total height of the svg element
 	totalHeight: 200,
 	
 	// the paddings around the chart 
-	padding: {top: 15, right: 10, bottom: 17, left: 35},
+	padding: {top: 40, right: 10, bottom: 17, left: 35},
 	
 	// the total width of the svg element (ratio of the containing element)
 	totalWidth: 1.0,
@@ -75,28 +75,28 @@ var DefaultParams = {
 	frameDuration: 1000,
 	
 	// transition duration
-	transitionDuration: 1000,
+	transitionDuration: 400,
 	
 	// tranbsition type
 	transitionEase: "linear",
 	
 	// color range
-	colorRange: ["#051", "#0f3"],
+	colorRange: ["#82B3AE", "#BCE3C5"],
 	
 	// axis lines & text colors
-	axisColor: "#0f3",
+	axisColor: "#230F2B",
 	axisFontSize: 12,
 
 	// displayed time delay in milliseconds
 	displayDelay: 0,
 
 	// legend line/box height
-	legendLineHeight: 11,
+	legendLineHeight: 12,
 
 	// time format function
 	timeFormat: function(d) {
 		return (d.getSeconds() === 0)
-			? d3.time.format("%H:%M").call(undefined, d)
+			? d3.time.format("%H:%M").call(null, d)
 			: (d.getSeconds() + '"')
 			;
 	},
@@ -116,7 +116,7 @@ var DefaultParams = {
 	},
 };	
 
-SmoothieBar.usedDefaultParams = SmoothieBar.clone(SmoothieBar.DefaultParams);
+SmoothieBar.usedDefaultParams = SmoothieBar.clone(DefaultParams);
 
 SmoothieBar.setDefaultParams = function(params) {
 	SmoothieBar.usedDefaultParams = SmoothieBar.merge(DefaultParams, params);
@@ -448,10 +448,10 @@ SmoothieBar.prototype.start = function() {
 			// - should be as close to 500ms as possible (to avoid second shift)
 			now = Date.now();
 			var ut = sb.params.frameDuration - (now % sb.params.frameDuration) + 500;
-			if (sb.targetId == debug_id) {
+			/*if (sb.targetId == debug_id) {
 				var n = new Date(now);
 				sb.log("NOW:" + n.getSeconds() + "s " + n.getMilliseconds() + "ms__FRAME:" + sb.params.frameDuration + "__UT:" + ut);
-			}
+			}*/
 			setTimeout(function() { 
 				sb.startTime = Date.now();
 				sb.log("start-time:" + new Date(sb.startTime).getSeconds() + "s " + new Date(sb.startTime).getMilliseconds() + "ms");
