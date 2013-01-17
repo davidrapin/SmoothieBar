@@ -38,7 +38,7 @@ See [example file](http://htmlpreview.github.com/?http://github.com/davidrapin/S
 
 ## Documentation
 
-**SmoothieBar ()** (constructor):
+**SmoothieBar(id, params)**: Constructor.
  
 * **id**: the id of the HTML element to add the chart to.
 * **params**: the parameters ofthe chart
@@ -60,16 +60,14 @@ See [example file](http://htmlpreview.github.com/?http://github.com/davidrapin/S
   * **transitionDuration** (default: `400`) the duration of the frame animation, in milliseconds. Cannot be longer than `frameDuration`.
   * **transitionEase** (default: `"linear"`) the type of frame transition animation. Can be [any type defined by d3.js](https://github.com/mbostock/d3/wiki/Transitions#wiki-d3_ease) (`"linear"` or `"bounce"` look best).
 
-**start()**:
-Starts the chart animation.
+**start()**: Starts the chart animation.
 
-**stop()**:
-Stops the chart animation.
+**stop()**: Stops the chart animation.
 
-**SmoothieBar.getFormat**:
+**SmoothieBar.getFormat(suffix)**: Returns a format number function using scientific units, and the .
 
 * **suffix** (default: none)
-Returns a format function 
+
 
 
 ### The dataLoader function
