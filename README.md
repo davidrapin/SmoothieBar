@@ -4,9 +4,10 @@
 
 A utility to display beautiful time bar-charts in the browser.
 
-## Usage
+See **[live SMoothieBar example](http://htmlpreview.github.com/?http://github.com/davidrapin/SmoothieBar/blob/master/example/index.html)**.
 
-See [example file](http://htmlpreview.github.com/?http://github.com/davidrapin/SmoothieBar/blob/master/example/index.html).
+
+## Usage
 
 	<html>
 	<head>
@@ -77,4 +78,3 @@ The `dataLoader` function set in the parameters receives two arguments: the numb
 If the `dataLoader` parameter is left undefined, a random integer dataset generator is used, generating three datasets.
 
 Typically, the first parameter (`wantedItems`) is equal to the number of bars in the chart on the first call, and the equal to 1 ever after (adding values to the chart one at a time).
-
