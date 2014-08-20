@@ -4,7 +4,7 @@
 
 A utility to display beautiful time bar-charts in the browser.
 
-See **[live SMoothieBar example](http://htmlpreview.github.com/?http://github.com/davidrapin/SmoothieBar/blob/master/example/index.html)**.
+See **[live SMoothieBar example](https://rawgit.com/davidrapin/SmoothieBar/master/example/index.html)**.
 
 
 ## Usage
